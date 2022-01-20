@@ -1,0 +1,41 @@
+Q1. Blog on Difference between HTTP 1.1 vs HTTP 2
+
+Evolution of HTTP
+HTTP/0.9 - single line protocol
+HTTP/1.0 - with header fields for metadata
+HTTP/1.1 - currently popular with faster response and less bandwidth usage
+HTTP/2 - single connection with server push
+
+HTTP 1.1
+1. Multiple connections are needed to load various elements of a webpage, hence page load speed is comparatively less. (i.e one request per TCP connection)
+2. Pipe-lining - second request is sent before the first request is fully served.
+3. No Header compression - many duplicate data are sent uncompressed on every request.
+4. Text based protocol - Requests are sent in readable format unlike HTTP/2 .
+5. No need for Stream prioritization because of head of line blocking.
+6. No Server push - only data that are requested are sent.
+
+HTTP 2
+1. Single Connection - One TCP connection is required to load the entire website thereby improving webpage load speed.
+2. Multiplexing - Can send multiple parallel requests for data over a single connection.
+3. Binary Protocol - Easier to parse and consumes less bandwidth.
+4. Header compression - Compression of requests header reduces the overhead.
+5. Server push - Server sends resources to client that are not requested but likely to be used in future, which are stored     in cache by the client. ( i.e sending both HTML and CSS file for a HTML request)
+6. Stream prioritization - loading various elements of the website in proper order. (i.e loading HTML and CSS files before JavaScript files)
+
+Q2. blog about objects and its internal representation in Javascript.
+
+Ans : Objects and their representation in JavaScript are handled differently than in other programming languages. In JavaScript, an object is a collection of key-value pairs.
+The collection can also contain functions, which are referred to as member functions, and all other keys are referred to as its properties. A number or a string can be used as a key.
+
+Example : var obj = {
+	name: “Harshit”,
+	age: 25,
+	list: [1,2,3],
+	changeAge: ()=>{
+	//logic to change age }
+	}
+
+Here ‘name’ , ‘age’ are the properties and and ‘changeAge’ is called the member function of the object. The key-value pairs can also include array. This is why objects in js are called an unordered collection of key-value pairs of primitive or reference types.
+Keys are used to access all the elements in an object. They can be accessed in two ways:
+* Dot notation
+* Array notation (i.e [])

@@ -1,0 +1,26 @@
+
+
+// for loop
+//let details = ['id', 'firstname', 'lastname', 'email', 'age','gender','profession','city','country','PhoneNo'];
+//for (let i = 0; i < details.length; i++) {
+ // console.log(details[i]);
+//}
+
+// for each 
+//let details = ['id', 'firstname', 'lastname', 'email', 'age','gender','profession','city','country','PhoneNo'];
+//details.forEach(function(details) {
+  //  console.log(details)
+//  })
+
+//let details = ['id', 'firstname', 'lastname', 'email', 'age','gender','profession','city','country','PhoneNo'];
+//for ( let key in details ) {
+
+   // console.log(`${key} => ${details[key]}`);
+//}
+
+let details = ['id', 'firstname', 'lastname', 'email', 'age','gender','profession','city','country','PhoneNo'];
+for ( let element of details ) {
+
+    // display the values
+    console.log(element);
+}
